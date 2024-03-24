@@ -18,7 +18,7 @@ useEffect(()=> {
 
 
     return (
-        <div className='h-screen grid place-items-center bg-greyBlack text-black bg-lightPink'>
+        <div className='h-screen grid place-items-center bg-greyBlack text-white bg-darkGrey'>
             <div className='flex flex-col items-center justify-center w-full lg:w-3/5 h-full gap-4 '>
             {validity == "success"
             ? 

@@ -72,10 +72,12 @@ export default function PingLocation () {
     },[userLat,userLong])  
 
     return (
+   
         <div onClick={getCoords} className="rounded-full bg-importantRed cursor-pointer h-56 w-56 flex flex-col gap-2 items-center justify-center md:row-start-3 md:row-end-4 md:col-start-2 md:col-end-3">
             <h3 className="text-xl font-black">closest store to you:</h3>
             {closestStore}
         </div>
+       
     )
 
 }

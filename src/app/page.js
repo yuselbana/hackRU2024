@@ -7,7 +7,7 @@ import CategoryPage from "@/Components/CategoryPage";
 export default function Home() {
   
   return (
-    <main className="bg-lightPink">
+    <main className="bg-darkGrey text-white">
       <NavBar/>
       <Hero/>
       <CategoryPage/>

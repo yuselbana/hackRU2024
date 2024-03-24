@@ -10,7 +10,8 @@ module.exports = {
       colors: {
         lightPink:'#FDE6EF',
         importantRed:'#EF4444',
-        offwhite:'#F4F4F4'
+        offwhite:'#F4F4F4',
+        darkGrey:'#222222'
       }
     },
   },

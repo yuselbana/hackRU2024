@@ -52,7 +52,7 @@ const NavBar = ({scroll,darkThreshold}) => {
     
 const NavBarItem = ({title,scroll,number}) => {
     return (
-        <Link scroll onClick={()=>{setNav(!nav); document.body.style.overflowY="auto"}}  href={scroll}>
+        <Link scroll onClick={()=>{setNav(!nav); document.body.style.overflowY="auto"}}   href={scroll}>
             <motion.div variants={menuItem} key="menu_item"  className="flex justify-center items-center gap-4">
                 <span>{number}</span>
             <h3 className="text-xl lg:text-3xl">{title}</h3>
@@ -65,16 +65,15 @@ const NavBarItem = ({title,scroll,number}) => {
 
     const Menu=() => {
         return (
-            <motion.div variants={menuContainer} initial="initial" animate="animate" exit="exit" key="menu" className="fixed touch-none top-0 right-0 w-screen lg:w-[50vw] overflow-hidden bg-[#222222] text-white grid grid-rows-6 h-screen z-50">
-            <span className="row-start-1 row-end-1 justify-self-center self-center" onClick={()=> {setNav(!nav); document.body.style.overflowY="auto"}}><XMarkIcon className="text-white h-12 w-12 cursor-pointer" /></span>
-                <div className="flex flex-col items-center justify-around row-start-2 row-end-5 w-full h-full">
-                <NavBarItem title={"about"} scroll={""} number={"(01)"}/>
-                <NavBarItem title={"services"} scroll={""} number={"(02)"}/>
-                <NavBarItem title={"the team"} scroll={""} number={"(03)"}/>
-                <NavBarItem title={"contact"} scroll={""} number={"(04)"}/>
+            <motion.div variants={menuContainer} initial="initial" animate="animate" exit="exit" key="menu" className="fixed touch-none top-0 right-0 w-screen lg:w-[50vw] overflow-hidden bg-importantRed  text-darkGrey grid grid-rows-6 h-screen z-50">
+            <span className="row-start-1 row-end-1 justify-self-center self-center" onClick={()=> {setNav(!nav); document.body.style.overflowY="auto"}}><XMarkIcon className="text-darkGrey h-12 w-12 cursor-pointer" /></span>
+                <div className="flex flex-col items-center justify-around row-start-2 row-end-5 w-full h-full ">
+                <NavBarItem title={"home"} scroll={"#home"} number={"(01)"}/>
+                <NavBarItem title={"categories"} scroll={"#categories"} number={"(02)"}/>
+                
                 </div>
                 <div className="row-start-5 row-end-6 w-full h-full flex justify-center items-center">
-                <h3 className="text-xl lg:text-3xl">RUshopping</h3>
+                <h3 className="text-xl lg:text-3xl">RUSHOP</h3>
                 </div>
 
                 <div className="grid grid-cols-3 row-start-6 row-end-7 items-end justify-items-center pb-4 ">
@@ -95,7 +94,8 @@ const NavBarItem = ({title,scroll,number}) => {
 
 
         <div className="flex justify-between items-center px-4 h-full">
-        <h1 className="text-importantRed text-5xl">RU<span className="text-black">SHOP</span></h1>
+            <Link href={"/"}><h1 className="text-importantRed text-5xl">RU<span className="text-white">SHOP</span></h1></Link>
+        
 
         <AnimatePresence mode='sync'>
         {nav ?    
@@ -104,7 +104,7 @@ const NavBarItem = ({title,scroll,number}) => {
          ""
          }
         </AnimatePresence>
-        <span className="mr-8" onClick={()=> {setNav(!nav); document.body.style.overflowY="hidden"}}><Bars3Icon  className={`${(scroll > darkThreshold) ? "text-white" : "text-black"} h-12 w-12 cursor-pointer `}/></span>
+        <span className="mr-8" onClick={()=> {setNav(!nav); document.body.style.overflowY="hidden"}}><Bars3Icon  className="text-white h-12 w-12 cursor-pointer"/></span>
     </div>
 
         </div>

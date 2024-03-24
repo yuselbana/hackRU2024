@@ -4,7 +4,7 @@ export async function GET () {
     var allLocations = []
     try {
          allLocations = await prismaClient.location.findMany()
-        console.log(allLocations);
+   
     } catch (error) {
         
     }

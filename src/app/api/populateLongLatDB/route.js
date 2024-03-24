@@ -8,7 +8,7 @@
    
   
 //     const convertAddressToLongLat = async(address) => {
-//       const r= await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${process.env.GOOGLE_KEY}`);
+//       const r= await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${process.env.NEXT_GOOGLE_KEY}`);
 //       const location = r.data.results[0].geometry.location;
 //       return location;
 //     }
@@ -18,7 +18,7 @@
 //     //**WAKEFERN**/
 //     const data =await axios.get("https://apimdev.wakefern.com/mockexample/V1/getStoreDetails/", {
 //     headers: {
-//         'Ocp-Apim-Subscription-Key': process.env.WAKE_FERN_KEY
+//         'Ocp-Apim-Subscription-Key': process.env.NEXT_WAKE_FERN_KEY
 //     }
 //     });
 //     const wakeFernStores = await data.data;

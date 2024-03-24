@@ -9,7 +9,7 @@
 //     //**WAKEFERN**/
 //     const data =await axios.get("https://apimdev.wakefern.com/mockexample/V1/getItemDetails/", {
 //     headers: {
-//         'Ocp-Apim-Subscription-Key': process.env.WAKE_FERN_KEY
+//         'Ocp-Apim-Subscription-Key': process.env.NEXT_WAKE_FERN_KEY
 //     }
 //     });
 

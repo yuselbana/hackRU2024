@@ -3,7 +3,7 @@ import Stripe from 'stripe'
 import axios from 'axios'
 
 
-const stripePrivKey= 'sk_test_51Oxf73L2pgkAvJUOKCE6iwc2UrClAY9Ans5kcoTplElafggRyUNJTOpK6iJ0oeVUiytbN66k5bmE6MurpObambbC00dfw2lAqG';
+// const stripePrivKey= 'sk_test_51Oxf73L2pgkAvJUOKCE6iwc2UrClAY9Ans5kcoTplElafggRyUNJTOpK6iJ0oeVUiytbN66k5bmE6MurpObambbC00dfw2lAqG';
 const wakeFernKey = '4ae9400a1eda4f14b3e7227f24b74b44'
 export async function GET() {
     //**WAKEFERN**/
@@ -60,17 +60,8 @@ export async function GET() {
 //     mapArr[i].image= "some image"
 //    }
 //    console.log(mapArr)
-const prices = await stripe.prices.list({
-    limit:1
-})
 
-const products = await stripe.products.list({
-    limit:1
-})
-console.log(prices)
-console.log(products)
-const price = await stripe.prices.retrieve(prices.data[0].id)
-console.log(price)
+
     return NextResponse.json(productArray)
 }
 

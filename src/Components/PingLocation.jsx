@@ -1,10 +1,11 @@
 'use client';
 import { useEffect,useState } from "react";
 import axios from 'axios'
+import {motion} from 'framer-motion'
 
 function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
-          var R = 6371; // Radius of the earth in km
-          var dLat = deg2rad(lat2-lat1);  // deg2rad below
+          var R = 6371; 
+          var dLat = deg2rad(lat2-lat1);  
           var dLon = deg2rad(lon2-lon1); 
           var a = 
             Math.sin(dLat/2) * Math.sin(dLat/2) +
@@ -12,7 +13,7 @@ function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
             Math.sin(dLon/2) * Math.sin(dLon/2)
             ; 
           var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
-          var d = R * c; // Distance in km
+          var d = R * c; 
           return d;
         }
         
@@ -73,10 +74,14 @@ export default function PingLocation () {
 
     return (
    
-        <div onClick={getCoords} className="rounded-full bg-importantRed cursor-pointer h-56 w-56 flex flex-col gap-2 items-center justify-center md:row-start-3 md:row-end-4 md:col-start-2 md:col-end-3">
+        <motion.div 
+        initial={{x:-10}}
+        animate={{x:10}}
+        transition={{repeatType:"reverse", duration:2,repeat:Infinity}}
+        onClick={getCoords} className="rounded-full bg-importantRed cursor-pointer h-56 w-56 flex flex-col gap-2 items-center justify-center md:row-start-3 md:row-end-4 md:col-start-2 md:col-end-3">
             <h3 className="text-xl font-black">closest store to you:</h3>
             {closestStore}
-        </div>
+        </motion.div>
        
     )
 

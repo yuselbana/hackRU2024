@@ -29,7 +29,7 @@ useEffect(()=> {
             </>
             :
             <>
-            <h3 className='text-2xl lg:text-3xl' >There was an error in your form submission...</h3>
+            <h3 className='text-2xl lg:text-3xl' >There was an error in completing your order...</h3>
             <p>Please try again later</p>
             <p>Redirecting in {counter}</p>
             <PacmanLoader size={40} color="#EF4444"/>

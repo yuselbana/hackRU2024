@@ -27,8 +27,8 @@ const Hero = () => {
             <PingLocation/>
             <div className='w-full row-start-3 row-end-4 col-start-1 col-end-3 flex justify-around items-center '>
                 <section className='w-1/2'>
-                <p>welcome to RUSHOP, the ultimate destination for affordable groceries and unparalleled convenience. We understand that time is precious, which is why we optimize yours by finding
-                     a grocery store near you and at a price that can&apos;t be beaten! Say farewell to the hassle of scouring the internet for your essential groceries!</p>
+                <p>welcome to RUSHOP, the ultimate destination for affordable groceries and unparalleled convenience. we understand that time is precious, which is why we optimize yours by finding
+                     a grocery store near you and at a price that can&apos;t be beaten! say farewell to the hassle of scouring the internet for your essential groceries. order online now for a discounted price!</p>
                 </section>
                 
                     <section className='flex justify-center items-center'>

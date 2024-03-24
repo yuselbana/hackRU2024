@@ -5,7 +5,17 @@ import {PrismaClient} from "@prisma/client"
 //     globalThis.prisma =prismaClient;
 // }
 
-const prismaClient = new PrismaClient();
+let prismaClient
+
+if (process.env.NODE_ENV === 'production') {
+  prismaClient = new PrismaClient()
+} else {
+  if (!global.prisma) {
+    global.prisma = new PrismaClient()
+  }
+  prismaClient = global.prisma
+}
+// console.log(process.env.NODE_ENV)
 
 
 export default prismaClient;

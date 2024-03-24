@@ -4,7 +4,7 @@ export async function GET() {
         var allGroceries = []
     try {
         allGroceries = await prismaClient.grocery.findMany()
-        // console.log(allGroceries);
+        console.log(allGroceries);
     } catch (error) {
         console.error(error)
     }

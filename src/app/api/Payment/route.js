@@ -15,9 +15,9 @@ export async function POST(request) {
         
         ],
         mode: 'payment',
-        //doesnt work in development, need "real" url
-        success_url:'https://google.com/',
-        // cancel_url:''
+
+        success_url:'https://hack-ru-2024.vercel.app/success',
+        cancel_url:'https://hack-ru-2024.vercel.app/error'
     })
         return NextResponse.json(session.url);
 }

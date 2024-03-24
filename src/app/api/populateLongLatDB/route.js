@@ -3,17 +3,7 @@ import axios from 'axios'
 import prismaClient from "@/app/libs/prismadb";
 
 const wakeFernKey = '4ae9400a1eda4f14b3e7227f24b74b44'
-const success =(position)=> {
-    // console.log(position)
-  }
-  const error = ()=> {
-    console.log("err")
-  }
-  const getCoords= ()=> {
-    if(navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(success,error);
-    }
-    }
+
 
    
   
@@ -35,7 +25,7 @@ export async function GET() {
     for(var i =0;i< wakeFernStores.length;i++) {
         let address =encodeURIComponent(`${wakeFernStores[i].Address}, ${wakeFernStores[i].City}, ${wakeFernStores[i].State}`) 
         let location =await convertAddressToLongLat(address)
-        console.log(location)
+        // console.log(location)
         // try {
         //     var newLocation = await prismaClient.location.create({
         //         data: {

@@ -20,7 +20,9 @@ model Grocery{
   id String @id @default(auto()) @map("_id") @db.ObjectId
   name String
   category String
-  price Int 
+  price Float
+  image String?
+  priceId String
  
 }
 
